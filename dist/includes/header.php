@@ -41,8 +41,9 @@ $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <i class="glyphicon glyphicon-refresh text-red"></i> Reorder
                       <span class="label label-danger">
+                      <!-- Check for reorder point and compare -->
                       <?php 
-                      $query=mysqli_query($con,"select COUNT(*) as count from product where prod_qty<=reorder and branch_id='$branch'")or die(mysqli_error());
+                      $query=mysqli_query($con,"select COUNT(*) as count from product where prod_qty <= reorder and branch_id='$branch'")or die(mysqli_error());
                 			$row=mysqli_fetch_array($query);
                 			echo $row['count'];
                 			?>	
@@ -117,7 +118,7 @@ $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die
 				   <li class="dropdown notifications-menu">
                     <!-- Menu toggle button -->
                     <a href="stockin.php">
-                      <i class="glyphicon glyphicon-list text-green"></i> Stockin
+                      <i class="glyphicon glyphicon-list text-green"></i> Stocking
                       
                     </a>
                     <ul class="dropdown-menu">

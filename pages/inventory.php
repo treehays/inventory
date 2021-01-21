@@ -10,7 +10,7 @@ endif;
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Product Inventory Report | <?php include('../dist/includes/title.php');?></title>
+    <title>Inventory Report | <?php include('../dist/includes/title.php');?></title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -72,8 +72,8 @@ $branch=$_SESSION['branch'];
         
 ?>      
                   <h5><b><?php echo $row['branch_name'];?></b> </h5>  
-                  <h6>Address: <?php echo $row['branch_address'];?></h6>
-                  <h6>Contact #: <?php echo $row['branch_contact'];?></h6>
+                  <h6><b>Address:</b> <?php echo $row['branch_address'];?></h6>
+                  <h6><b>Phone No:</b> <?php echo $row['branch_contact'];?></h6>
 				  <h5><b>Product Inventory as of today, <?php echo date("M d, Y h:i a");?></b></h5>
                   
 				  <a class = "btn btn-success btn-print" href = "" onclick = "window.print()"><i class ="glyphicon glyphicon-print"></i> Print</a>
@@ -83,12 +83,11 @@ $branch=$_SESSION['branch'];
                     <thead>
 					
                       <tr>
-					              <th>Product Code</th> 
+					              <th>BarCode</th> 
                         <th>Product Name</th>
                         <th>Supplier</th>                        
                         <th>Qty Left</th>
-						
-            						<th>Price</th>
+						 						<th>Price</th>
             						<th>Total</th>
             						<th>Reorder</th>
                        
@@ -111,7 +110,7 @@ $branch=$_SESSION['branch'];
 						
 						<td><?php echo $row['prod_price'];?></td>
 						<td><?php echo number_format($total,2);?></td>
-						<td class="text-center"><?php if ($row['prod_qty']<=$row['reorder'])echo "<span class='badge bg-red'><i class='glyphicon glyphicon-refresh'></i>Reorder</span>";?></td>
+						<td class="text-left"><?php if ($row['prod_qty']<=$row['reorder'])echo "<span class='badge bg-red'><i class='glyphicon glyphicon-refresh'></i>Reorder</span>";?></td>
                        
                       </tr>
 
@@ -122,7 +121,7 @@ $branch=$_SESSION['branch'];
                         <th colspan="5">Total</th>
                         
 						
-						<th colspan="2">P<?php echo number_format($grand,2);?></th>
+						<th colspan="2">N <?php echo number_format($grand,2);?></th>
 						
                         
                       </tr>	

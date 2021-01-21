@@ -33,7 +33,7 @@ endif;
           <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              <a class="btn btn-lg btn-warning" href="reorder.php">Back</a>
+              <a class="btn btn-lg btn-warning" href="home.php">Back</a>
               <a class="btn btn-lg btn-info" href="request.php">View Purchase Request</a>
             </h1>
             <ol class="breadcrumb">

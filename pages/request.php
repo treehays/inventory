@@ -34,7 +34,7 @@ endif;
           <section class="content-header">
             <h1>
               <a class="btn btn-lg btn-warning" href="reorder.php">Back</a>
-              <a class="btn btn-lg btn-info" href="purchase_request.php">View Purchase Request</a>
+              <a class="btn btn-lg btn-info" href="purchase_request.php">Print Purchase Request</a>
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>

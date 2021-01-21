@@ -17,6 +17,11 @@ endif;
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
+    <!-- Font Awesome -->
+    <!-- <link href="bootstrap/font-awesome/css/font-awesome.css" rel="stylesheet" /> -->
+    <!-- <link href="bootstrap/fontawesome/css/fontawesome.css" rel="stylesheet" /> -->
+    <!-- <link href="bootstrap/fontawesome/css/all.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="../bootstrap/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="../plugins/select2/select2.min.css">
@@ -46,23 +51,66 @@ endif;
 	      <div class="col-md-8">
               <div class="box box-primary">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Transactions</h3>
-                </div><!-- /.box-header -->
+                 
+                <?php
+                $id=$_SESSION['id'];
+                $query=mysqli_query($con,"select * from user where user_id='$id'")or die(mysqli_error($con));
+                $row=mysqli_fetch_array($query);
+
+
+                // trying to great user base on time base
+                // timezone
+                // Rex
+                date_default_timezone_set ('UTC');
+                // setting the time to be 24 hourswithout o
+              //  
+                $Hour = date('G');
+                if ($Hour >= 23 && $Hour <= 4) {
+                  $gretings = "Go to Bed , ";
+                }else if ($Hour >= 5 && $Hour <= 11) {
+                  $gretings = "Good Morning,";
+                }else if ($Hour >= 12 && $Hour <= 18) {
+                  $gretings ="Good AFternoon, ";
+                }else if ($Hour >= 19 && $Hour <= 22) {
+                  $gretings ="Good Evening, ";
+                }
+
+
+                ?>               
+                 
+                  <h3 class="text-left" style="margin-top:1px"><b> <?php echo $gretings ?> <?php echo $row['name'];?> </b></h3>
+                  <!-- <h3 class="box-title" >Transactions</h3> -->
+                  </div><!-- /.box-header -->
+                
+
+                <!-- tryin new code  Rex-->
+              <!-- <div style="margin-top:1px" >
+                <h3 class="text-left" style="margin-top:1px"><b> WELCOME, <?php echo $branch_name;?> </b></h3>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                  <i class="fa fa-bars"></i>
+                </button>
+              </div> -->
+
+
+
+
+
+
                 <div class="box-body">
                   <div class="row">
                       <div class="col-lg-4 col-xs-6">
                         <!-- small box -->
                         <div class="small-box bg-green">
                           <div class="inner">
-                          <!-- Modified Line 001-->
-                            <a href="cust_new.php" class="small-box bg-green">
+                          <!-- Modified Line Rex 001-->
+                            <a href="cust_new.php" class="bg-green">
                             <h3>Purchase</h3>
                             <p>Cash</p>
                             </a>
                             <!-- Modified Line 001  -->
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="glyphicon glyphicon-user"></i>
+                            <i class="fa fa-money-check-alt"></i>
                           </div>
                           <a href="cust_new.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
@@ -75,7 +123,9 @@ endif;
                         <!-- small box -->
                         <div class="small-box bg-red">
                           <div class="inner">
-                            <h3>Stockin</h3>
+                          <!-- Modified Line Rex 001-->
+                          <a href="stockin.php" class="bg-red">
+                            <h3>Stock's</h3>
                             <p>Products</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
@@ -91,11 +141,13 @@ endif;
                         <!-- small box -->
                         <div class="small-box bg-yellow">
                           <div class="inner">
+                          <!-- Modified Line Rex 001-->
+                          <a href="customer.php" class="bg-yellow">
                             <h3>Payment</h3>
                             <p>Customer</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="glyphicon glyphicon-usd"></i>
+                            <i class="fa fa-cash-register"></i>
                           </div>
                           <a href="customer.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
@@ -106,11 +158,13 @@ endif;
                         <!-- small box -->
                         <div class="small-box bg-red">
                           <div class="inner">
+                          <!-- Modified Line Rex 001-->
+                          <a href="creditor.php" class="bg-red">
                             <h3>Credit</h3>
                             <p>Apply</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="glyphicon glyphicon-user"></i>
+                            <i class="fa fa-money-check-edit-alt"></i>
                           </div>
                           <a href="creditor.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
@@ -122,6 +176,8 @@ endif;
                         <!-- small box -->
                         <div class="small-box bg-orange">
                           <div class="inner">
+                          <!-- Modified Line Rex 001-->
+                          <a href="product.php" class="bg-orange">
                             <h3>Products</h3>
                             <p>View/Add</p>
                           </div>
@@ -162,7 +218,7 @@ endif;
 
                   <hr>
 
-                  <strong><i class="glyphicon glyphicon-phone-alt margin-r-5"></i> Contact Number/s</strong>
+                  <strong><i class="glyphicon glyphicon-phone-alt margin-r-5"></i> Contact Number's</strong>
                   <p class="text-muted"><?php echo $row['branch_contact'];?></p>
 
                   <hr>
@@ -176,6 +232,37 @@ endif;
           </div><!-- /.row -->
 	  
             
+
+
+          <section class="content">
+            <div class="row">
+	      <div class="col-md-8">
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                 
+                  <?php 
+                  
+
+                  // <h3 class="text-left" style="margin-top:1px">Welcome</h3>
+                  // <!-- <h3 class="box-title" >Transactions</h3> -->
+                  $file ="quote.txt";
+                  $quotes = file($file);
+                  srand ((double)microtime()*1000000);
+                  $randomquote = rand(0,count($quotes)-1);
+                  echo $quotes[$randomquote];
+
+
+
+                  ?>
+                  
+                  </div><!-- /.box-header -->
+
+
+
+
+
+
+
           </section><!-- /.content -->
         </div><!-- /.container -->
       </div><!-- /.content-wrapper -->
