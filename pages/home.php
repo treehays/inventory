@@ -61,24 +61,25 @@ endif;
                 // trying to great user base on time base
                 // timezone
                 // Rex
-                date_default_timezone_set ('UTC');
+                date_default_timezone_set ('Asia/Calcutta');
+                // $timezone = date ("e");
                 // setting the time to be 24 hourswithout o
               //  
-                $Hour = date('G');
+                $Hour = date('H');
                 if ($Hour >= 23 && $Hour <= 4) {
-                  $gretings = "Go to Bed , ";
+                  $greetings = "Go to Bed , ";
                 }else if ($Hour >= 5 && $Hour <= 11) {
-                  $gretings = "Good Morning,";
+                  $greetings = "Good Morning,";
                 }else if ($Hour >= 12 && $Hour <= 18) {
-                  $gretings ="Good AFternoon, ";
+                  $greetings ="Good AFternoon, ";
                 }else if ($Hour >= 19 && $Hour <= 22) {
-                  $gretings ="Good Evening, ";
+                  $greetings ="Good Evening, ";
                 }
 
 
                 ?>               
                  
-                  <h3 class="text-left" style="margin-top:1px"><b> <?php echo $gretings ?> <?php echo $row['name'];?> </b></h3>
+                  <h3 class="text-left" style="margin-top:1px"><b> <?php echo $greetings ?> <?php echo $row['name'];?> </h3>
                   <!-- <h3 class="box-title" >Transactions</h3> -->
                   </div><!-- /.box-header -->
                 
