@@ -1,4 +1,5 @@
 <!-- Testing GitHub -->
+<!-- Rex -->
 <?php session_start();
 ?>
 <!DOCTYPE html>
