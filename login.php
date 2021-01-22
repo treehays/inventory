@@ -1,4 +1,4 @@
-<!-- Testing GitHub -->
+<!-- Using Github -->
 <!-- Rex -->
 <?php session_start();
 ?>

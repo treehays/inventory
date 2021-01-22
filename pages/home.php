@@ -126,7 +126,7 @@ endif;
                           <div class="inner">
                           <!-- Modified Line Rex 001-->
                           <a href="stockin.php" class="bg-red">
-                            <h3>Stock's</h3>
+                            <h3>Stock</h3>
                             <p>Products</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
