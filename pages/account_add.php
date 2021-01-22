@@ -1,3 +1,4 @@
+<!-- starting with  adding acccounts -->
 <?php 
 session_start();
 include('../dist/includes/dbcon.php');
