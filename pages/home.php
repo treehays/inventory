@@ -97,16 +97,14 @@ endif;
 
                 <div class="box-body">
                   <div class="row">
-                      <div class="col-lg-4 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-green">
+                      <div class="col-lg-4 col-xs-6"> <!-- small box only for purchase -->
+                        <!-- small box only for purchase -->
+                        <div class="small-box bg-blue">
                           <div class="inner">
                           <!-- Modified Line Rex 001-->
                             <a href="cust_new.php" class="bg-green">
                             <h3>Purchase</h3>
                             <p>Cash</p>
-                            </a>
-                            <!-- Modified Line 001  -->
                           </div>
                           <div class="icon" style="margin-top:10px">
                             <i class="fa fa-money-check-alt"></i>
@@ -120,7 +118,7 @@ endif;
 
                       <div class="col-lg-4 col-xs-6">
                         <!-- small box -->
-                        <div class="small-box bg-red">
+                        <div class="small-box bg-purple">
                           <div class="inner">
                           <!-- Modified Line Rex 001-->
                           <a href="stockin.php" class="bg-red">
@@ -138,7 +136,7 @@ endif;
                       
                       <div class="col-lg-4 col-xs-6">
                         <!-- small box -->
-                        <div class="small-box bg-yellow">
+                        <div class="small-box bg-aqua">
                           <div class="inner">
                           <!-- Modified Line Rex 001-->
                           <a href="customer.php" class="bg-yellow">
@@ -173,7 +171,7 @@ endif;
 
                       <div class="col-lg-4 col-xs-6">
                         <!-- small box -->
-                        <div class="small-box bg-orange">
+                        <div class="small-box bg-olive">
                           <div class="inner">
                           <!-- Modified Line Rex 001-->
                           <a href="product.php" class="bg-orange">
@@ -188,6 +186,28 @@ endif;
                           </a>
                         </div>
                       </div><!-- ./col -->
+
+
+                      <div class="col-lg-4 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light-blue">
+                          <div class="inner">
+                          <!-- Modified Line Rex 001-->
+                          <a href="sales.php" class="bg-red">
+                            <h3>Report</h3>
+                            <p>Sales</p>
+                          </div>
+                          <div class="icon" style="margin-top:10px">
+                            <i class="fa fa-list-alt"></i>
+                          </div>
+                          <a href="stockin.php" class="small-box-footer">
+                            Go <i class="fa fa-arrow-circle-right"></i>
+                          </a>
+                        </div>
+                      </div><!-- ./col -->
+
+
+
                   </div><!--row-->
                   
       

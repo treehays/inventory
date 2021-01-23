@@ -60,12 +60,12 @@ endif;
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-            						<th>Account #</th>
+            						<th>ID</th>
             						<th>Picture</th>
-                        <th>Customer Last Name</th>
-                        <th>Customer First Name</th>
+                        <th>Last Name</th>
+                        <th>FirstName</th>
                         <th>Address</th>
-            						<th>Contact #</th>
+            						<th>PhoneNo</th>
             						<th>Balance</th>
                         <th>Credit Status</th>
             						<th>Status</th>
@@ -153,15 +153,15 @@ endif;
                     </tbody>
                     <tfoot>
                       <tr>
-                        <th>#</th>
-						<th>Picture</th>
-                        <th>Customer Last Name</th>
-                        <th>Customer First Name</th>
+                        <th>ID</th>
+						            <th>Picture</th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
                         <th>Address</th>
-              						<th>Contact #</th>
-              						<th>Balance</th>
-                          <th>Credit Status</th>
-              						<th>Status</th>
+              					<th>Phone No</th>
+              					<th>Balance</th>
+                        <th>Credit Status</th>
+              					<th>Status</th>
                         <th>Action</th>
                       </tr>					  
                     </tfoot>

@@ -42,7 +42,7 @@ endif;
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-              <li class="active">Product</li>
+              <li class="active">Stocking</li>
             </ol>
           </section>
 
@@ -52,14 +52,14 @@ endif;
 	      <div class="col-md-4">
               <div class="box box-primary">
                 <div class="box-header">
-                  <h3 class="box-title">Stockin Products</h3>
+                  <h3 class="box-title">Stocking Products</h3>
                 </div>
                 <div class="box-body">
                   <!-- Date range -->
                   <form method="post" action="stockin_add.php" enctype="multipart/form-data">
   
                   <div class="form-group">
-                    <label for="date">Product Name</label>
+                    <label for="date">Select Product</label>
                     <div class="input-group col-md-12">
                       <select class="form-control select2" name="prod_name" required>
                       <?php
@@ -76,19 +76,17 @@ endif;
                   <div class="form-group">
                     <label for="date">Quantity</label>
                     <div class="input-group col-md-12">
-                      <input type="text" class="form-control pull-right" id="date" name="qty" placeholder="Quantity" required>
+                      <input type="number" class="form-control pull-right" id="date" name="qty" placeholder="Enter the Quantity to be stocked" required>
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->
                 
                   <div class="form-group">
                     <div class="input-group">
-                      <button class="btn btn-primary" id="daterange-btn" name="">
-                        Save
-                      </button>
-					  <button class="btn" id="daterange-btn">
+                      <button class="btn btn-primary" id="daterange-btn" name="">Save</button>
+					  <button type= reset class="btn" id="daterange-btn">
                         Clear
                       </button>
-                    </div>
+                    </div>  
                   </div><!-- /.form group -->
 				</form>	
                 </div><!-- /.box-body -->
@@ -99,7 +97,7 @@ endif;
               <div class="box box-primary">
     
                 <div class="box-header">
-                  <h3 class="box-title">Product Stockin List</h3>
+                  <h3 class="box-title">Product Stocking List</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
