@@ -20,8 +20,8 @@ endif;
     <!-- Font Awesome -->
     <!-- <link href="bootstrap/font-awesome/css/font-awesome.css" rel="stylesheet" /> -->
     <!-- <link href="bootstrap/fontawesome/css/fontawesome.css" rel="stylesheet" /> -->
-    <!-- <link href="bootstrap/fontawesome/css/all.css" rel="stylesheet" /> -->
-    <link rel="stylesheet" href="../bootstrap/fontawesome/css/all.min.css">
+    <link href="../bootstrap/fontawesome/css/all.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="../bootstrap/fontawesome/css/all.min.css"> -->
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="../plugins/select2/select2.min.css">
@@ -61,22 +61,20 @@ endif;
                 // trying to great user base on time base
                 // timezone
                 // Rex
-                date_default_timezone_set ('Asia/Calcutta');
+                date_default_timezone_set ('UTC');
                 // $timezone = date ("e");
                 // setting the time to be 24 hourswithout o
               //  
                 $Hour = date('H');
-                if ($Hour >= 23 && $Hour <= 4) {
-                  $greetings = "Go to Bed , ";
-                }else if ($Hour >= 5 && $Hour <= 11) {
+                if ($Hour >= 5 && $Hour <= 11) {
                   $greetings = "Good Morning,";
-                }else if ($Hour >= 12 && $Hour <= 18) {
+                }else if ($Hour >= 12 && $Hour <= 17) {
                   $greetings ="Good AFternoon, ";
-                }else if ($Hour >= 19 && $Hour <= 22) {
+                }else if ($Hour >= 18 && $Hour <= 20) {
                   $greetings ="Good Evening, ";
+                }else {
+                  $greetings ="Go to bed, ";
                 }
-
-
                 ?>               
                  
                   <h3 class="text-left" style="margin-top:1px"><b> <?php echo $greetings ?> <?php echo $row['name'];?> </h3>
