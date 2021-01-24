@@ -16,12 +16,10 @@ endif;
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <!-- Font Awesome -->
-    <!-- <link href="bootstrap/font-awesome/css/font-awesome.css" rel="stylesheet" /> -->
-    <!-- <link href="bootstrap/fontawesome/css/fontawesome.css" rel="stylesheet" /> -->
-    <link href="../bootstrap/fontawesome/css/all.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="../bootstrap/fontawesome/css/all.min.css"> -->
+    <link rel="stylesheet" href="../bootstrap/midcss/midix_animation.css">
+    <link rel="stylesheet" href="../bootstrap/fontawesome/css/all.min.css">
+    <link href="../bootstrap/css/layoutpage.css" rel="stylesheet" />
+    <link href="../bootstrap/css/preloaders.css" rel="stylesheet" />
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="../plugins/select2/select2.min.css">
@@ -99,6 +97,9 @@ endif;
                   <div class="row">
                       <div class="col-lg-4 col-xs-6"> <!-- small box only for purchase -->
                         <!-- small box only for purchase -->
+
+                        <!-- help us -->
+                          
                         <div class="small-box bg-blue">
                           <div class="inner">
                           <!-- Modified Line Rex 001-->
@@ -107,7 +108,7 @@ endif;
                             <p>Cash</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="fa fa-money-check-alt"></i>
+                            <i class="fa fa-money-check-alt fa-1x spin midix_hover infinite"></i>
                           </div>
                           <a href="cust_new.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
@@ -126,7 +127,7 @@ endif;
                             <p>Products</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="glyphicon glyphicon-share-alt"></i>
+                            <i class="glyphicon glyphicon-share-alt fa-1x spin midix_hover infinite"></i>
                           </div>
                           <a href="stockin.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
@@ -144,7 +145,7 @@ endif;
                             <p>Customer</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="fa fa-cash-register"></i>
+                            <i class="fa fa-cash-register fa-1x spin midix_hover infinite"></i>
                           </div>
                           <a href="customer.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
@@ -161,7 +162,7 @@ endif;
                             <p>Apply</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="fa fa-money-check-edit-alt"></i>
+                            <i class="fa fa-money-check-edit-alt fa-1x spin midix_hover infinite"></i>
                           </div>
                           <a href="creditor.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
@@ -179,13 +180,16 @@ endif;
                             <p>View/Add</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                            <i class="glyphicon glyphicon-shopping-cart fa-1x spin midix_hover infinite"></i>
                           </div>
                           <a href="product.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
                           </a>
                         </div>
                       </div><!-- ./col -->
+
+
+                      
 
 
                       <div class="col-lg-4 col-xs-6">
@@ -198,7 +202,7 @@ endif;
                             <p>Sales</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="fa fa-list-alt"></i>
+                            <i class="fa fa-list-alt fa-1x spin midix_hover infinite"></i>
                           </div>
                           <a href="stockin.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
