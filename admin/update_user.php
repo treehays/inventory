@@ -19,7 +19,7 @@ include('dbcon.php');
 	 else
 	 {
 		 $pass=md5($password);
-		$salt="a1Bz20ydqelm8m1wql";
+		$salt="ahmad0ydqelm8m1wql";
 		$pass=$salt.$pass;
 
 		 mysqli_query($con,"UPDATE user SET username='$username', password = '$pass', name = '$name', status = '$status', branch_id = '$branch_id' where user_id='$id'")

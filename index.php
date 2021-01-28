@@ -10,9 +10,13 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
+  <style>
+    div {
+      background-image: url('bgimag.jpg');
+    }
+  </style>
   <!-- Font Awesome -->
-  <link href="bootstrap/fontawesome/css/fontawesome.css" rel="stylesheet" />
+  <!-- <link href="bootstrap/fontawesome/css/fontawesome.css" rel="stylesheet" /> -->
   <link href="bootstrap/fontawesome/css/all.css" rel="stylesheet" />
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
@@ -66,10 +70,7 @@
         </div>
         <div class="form-group has-feedback">
           <input type="password" class="form-control" placeholder="Password" name="password" required>
-          <!-- removed by rex
-            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            -->
-          <!-- trying fontawsome -->
+
           <!-- <i class="fa fa-desktop"></i> -->
           <span class="fa fa-unlock form-control-feedback"></span>
 

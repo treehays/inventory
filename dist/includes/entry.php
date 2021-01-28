@@ -24,7 +24,7 @@
 	$type=$_POST['type'];
 	$password=$_POST['password'];
 	$password1=md5($password);
-	$salt="a1Bz20ydqelm8m1wql";
+	$salt="ahmad0ydqelm8m1wql";
 	$pass=$salt.$password1;
 	echo $pass;
 	$query=mysqli_query($con,"select COUNT(*) as total from user where username='$username'")or die(mysqli_error());

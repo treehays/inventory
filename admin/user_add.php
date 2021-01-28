@@ -7,7 +7,7 @@ include('../dist/includes/dbcon.php');
 	$password = $_POST['password'];
 
 		$pass=md5($password);
-		$salt="a1Bz20ydqelm8m1wql";
+		$salt="ahmad0ydqelm8m1wql";
 		$pass=$salt.$pass;
 	
 			

@@ -11,7 +11,7 @@ $pass_unsafe=$_POST['password'];
 $user = mysqli_real_escape_string($con,$user_unsafe);
 $pass1 = mysqli_real_escape_string($con,$pass_unsafe);
 $pass=md5($pass1);
-$salt="a1Bz20ydqelm8m1wql";
+$salt="rex0ydqelm8m1wql";
 $pass=$salt.$pass;
 
 $query=mysqli_query($con,"select * from user where username='$user' and password='$pass' and status = 'Active' and branch_id='0'")or die(mysqli_error($con));

@@ -110,7 +110,7 @@ $branch=$_SESSION['branch'];
 						
 						<td><?php echo $row['prod_price'];?></td>
 						<td><?php echo number_format($total,2);?></td>
-						<td class="text-left"><?php if ($row['prod_qty']<=$row['reorder'])echo "<span class='badge bg-red'><i class='glyphicon glyphicon-refresh'></i>Reorder</span>";?></td>
+						<td class="text-left"><?php if ($row['prod_qty']<=$row['reorder'])echo "<a href=reorder.php class='badge bg-red'><i class='glyphicon glyphicon-refresh'></i>Reorder</a>";?></td>
                        
                       </tr>
 

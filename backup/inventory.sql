@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 28, 2021 at 09:02 AM
+-- Generation Time: Jan 28, 2021 at 02:57 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.19
 
@@ -68,7 +68,11 @@ INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
 (9, 'Kitchen Appliance'),
 (10, 'Gadget'),
 (11, 'Rice Cooker'),
-(12, 'Cosmetics');
+(12, 'Cosmetics cAs'),
+(13, 'Fabric Alway'),
+(14, 'fsdds'),
+(15, 'Mobile phones'),
+(16, 'Foods asss');
 
 -- --------------------------------------------------------
 
@@ -85,25 +89,25 @@ CREATE TABLE `customer` (
   `balance` decimal(10,2) NOT NULL,
   `cust_pic` varchar(300) NOT NULL,
   `bday` date DEFAULT NULL,
-  `nickname` varchar(30) NOT NULL,
-  `house_status` varchar(30) NOT NULL,
-  `years` varchar(20) NOT NULL,
-  `rent` varchar(10) NOT NULL,
-  `emp_name` varchar(100) NOT NULL,
-  `emp_no` varchar(30) NOT NULL,
-  `emp_address` varchar(100) NOT NULL,
-  `emp_year` varchar(10) NOT NULL,
-  `occupation` varchar(30) NOT NULL,
-  `salary` varchar(30) NOT NULL,
-  `spouse` varchar(30) NOT NULL,
-  `spouse_no` varchar(30) NOT NULL,
-  `spouse_emp` varchar(50) NOT NULL,
-  `spouse_details` varchar(100) NOT NULL,
-  `spouse_income` decimal(10,2) NOT NULL,
-  `comaker` varchar(30) NOT NULL,
-  `comaker_details` varchar(100) NOT NULL,
+  `nickname` varchar(30) DEFAULT NULL,
+  `house_status` varchar(30) DEFAULT NULL,
+  `years` varchar(20) DEFAULT NULL,
+  `rent` varchar(10) DEFAULT NULL,
+  `emp_name` varchar(100) DEFAULT NULL,
+  `emp_no` varchar(30) DEFAULT NULL,
+  `emp_address` varchar(100) DEFAULT NULL,
+  `emp_year` varchar(10) DEFAULT NULL,
+  `occupation` varchar(30) DEFAULT NULL,
+  `salary` varchar(30) DEFAULT NULL,
+  `spouse` varchar(30) DEFAULT NULL,
+  `spouse_no` varchar(30) DEFAULT NULL,
+  `spouse_emp` varchar(50) DEFAULT NULL,
+  `spouse_details` varchar(100) DEFAULT NULL,
+  `spouse_income` decimal(10,2) DEFAULT NULL,
+  `comaker` varchar(30) DEFAULT NULL,
+  `comaker_details` varchar(100) DEFAULT NULL,
   `branch_id` int(11) NOT NULL,
-  `credit_status` varchar(10) NOT NULL,
+  `credit_status` varchar(10) DEFAULT NULL,
   `ci_remarks` varchar(1000) DEFAULT NULL,
   `ci_name` varchar(50) DEFAULT NULL,
   `ci_date` date DEFAULT NULL,
@@ -119,9 +123,11 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`cust_id`, `cust_first`, `cust_last`, `cust_address`, `cust_contact`, `balance`, `cust_pic`, `bday`, `nickname`, `house_status`, `years`, `rent`, `emp_name`, `emp_no`, `emp_address`, `emp_year`, `occupation`, `salary`, `spouse`, `spouse_no`, `spouse_emp`, `spouse_details`, `spouse_income`, `comaker`, `comaker_details`, `branch_id`, `credit_status`, `ci_remarks`, `ci_name`, `ci_date`, `payslip`, `valid_id`, `cert`, `cedula`, `income`) VALUES
-(1, 'Kenneth', 'Aboy', 'Silay City\r\n', '09098', '0.00', 'default.gif', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0.00', '', '', 1, '', '', '', '0000-00-00', 0, 0, 0, 0, 0),
+(1, 'Kenneth', 'Aboyd', 'Silay City\r\n', '09098sas', '0.00', 'default.gif', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0.00', '', '', 1, '', '', '', '0000-00-00', 0, 0, 0, 0, 0),
 (2, 'Honeylee', 'Magbanua', 'Brgy. Busay, bago CIty', '09051914070', '303.20', 'default.gif', '1989-10-14', 'lee', 'owned', '27', 'NA', 'Stratium Software', '034-707-1630', 'Ayala Northpoint', '1', 'Systems Administrator', '12000', 'NA', 'NA', 'NA', 'NA', '0.00', 'Kaye Angela Cueva', 'Cadiz City', 1, 'Approved', '', '', '0000-00-00', 0, 0, 0, 0, 0),
-(3, 'Abdulsalam', 'Ahmaddiya settlement', 'No 23, off federal Plytechnic road Ede', '08164671994', '0.00', 'default.gif', '1990-06-22', 'Treehays', 'owned', '', 'Nill', 'Salami M. O.', '08066117783', 'Federal Road , Local Government Shopping complex Ede', '2018', 'Stock Manager', '40000', 'Abdulsalam  Abdulmuiz', '08134573756', 'Olaolu Enterprises ', 'federal Road 08066117783', '35000.00', 'Ahmad', '09012023934', 1, 'pending', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(3, 'Abdulsalam', 'Ahmaddiya settlement', 'No 23, off federal Plytechnic road Ede', '08164671994', '0.00', 'default.gif', '1990-06-22', 'Treehays', 'owned', '', 'Nill', 'Salami M. O.', '08066117783', 'Federal Road , Local Government Shopping complex Ede', '2018', 'Stock Manager', '40000', 'Abdulsalam  Abdulmuiz', '08134573756', 'Olaolu Enterprises ', 'federal Road 08066117783', '35000.00', 'Ahmad', '09012023934', 1, 'Approved', 'adas', 'dsfds', '2222-02-22', 1, 1, 1, 1, 1),
+(4, 'firstname', 'lastname', 'no of addres', '0930232839', '0.00', 'default.gif', '2020-02-22', 'nj#ickky', 'owned', '', 'no rentin', 'mr salami', '093082389', 'no 23 buainess ', '4', 'tailor', '30000', 'njcn spouse', '9832747643', 'Farming', '0932384327 FBFIWKJ', '200000.00', 'aihdkjnsada', 'jdwnkan jwhbdyu 922', 1, 'pending', 'qweq', 'Ahmad', '2222-02-22', 1, 1, 1, 1, 1),
+(5, 'sdsdvcx', 'asdasd', 'Federal Poly Ede Maingate', '213423423', '0.00', 'default.gif', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -150,7 +156,26 @@ INSERT INTO `history_log` (`log_id`, `user_id`, `action`, `date`) VALUES
 (7, 1, 'has logged in the system at ', '2017-02-04 13:13:53'),
 (8, 1, 'has logged in the system at ', '2017-02-21 18:56:56'),
 (9, 1, 'added a payment of -76.6 for , ', '2017-02-21 00:00:00'),
-(10, 1, 'has logged in the system at ', '2021-01-28 16:52:33');
+(10, 1, 'has logged in the system at ', '2021-01-28 16:52:33'),
+(11, 1, 'has logged out the system at ', '2021-01-28 17:13:59'),
+(12, 1, 'has logged in the system at ', '2021-01-28 17:18:38'),
+(13, 1, 'has logged out the system at ', '2021-01-28 17:19:31'),
+(14, 4, 'has logged in the system at ', '2021-01-28 17:20:18'),
+(15, 4, 'has logged out the system at ', '2021-01-28 17:20:22'),
+(16, 4, 'has logged in the system at ', '2021-01-28 17:21:18'),
+(17, 4, 'has logged out the system at ', '2021-01-28 17:23:28'),
+(18, 1, 'has logged in the system at ', '2021-01-28 21:03:03'),
+(19, 1, 'has logged out the system at ', '2021-01-28 21:31:58'),
+(20, 1, 'has logged in the system at ', '2021-01-28 21:33:42'),
+(21, 1, 'has logged in the system at ', '2021-01-28 22:15:03'),
+(22, 1, 'has logged out the system at ', '2021-01-28 22:19:56'),
+(23, 1, 'has logged in the system at ', '2021-01-28 22:20:28'),
+(24, 1, 'has logged in the system at ', '2021-01-28 22:24:39'),
+(25, 1, 'has logged in the system at ', '2021-01-28 22:25:15'),
+(26, 1, 'added 100 of Rice Cooker', '2021-01-28 22:36:29'),
+(27, 1, 'added 232 of LG 43', '2021-01-28 22:36:40'),
+(28, 1, 'has logged in the system at ', '2021-01-28 22:46:33'),
+(29, 1, 'has logged in the system at ', '2021-01-28 22:48:28');
 
 -- --------------------------------------------------------
 
@@ -168,10 +193,10 @@ CREATE TABLE `payment` (
   `branch_id` int(11) NOT NULL,
   `payment_for` date NOT NULL,
   `due` decimal(10,2) NOT NULL,
-  `interest` decimal(10,2) NOT NULL,
-  `remaining` decimal(10,2) NOT NULL,
+  `interest` decimal(10,2) DEFAULT NULL,
+  `remaining` decimal(10,2) DEFAULT NULL,
   `status` varchar(20) NOT NULL,
-  `rebate` decimal(10,2) NOT NULL,
+  `rebate` decimal(10,2) DEFAULT NULL,
   `or_no` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -183,10 +208,11 @@ INSERT INTO `payment` (`payment_id`, `cust_id`, `sales_id`, `payment`, `payment_
 (3156, 1, 6, '550.00', '2017-02-21 19:57:12', 1, 1, '2017-02-21', '550.00', '0.00', '0.00', 'paid', '0.00', 1901),
 (3157, 2, 7, '550.00', '2017-02-21 19:57:29', 1, 1, '2017-02-21', '550.00', '0.00', '0.00', 'paid', '0.00', 1902),
 (3163, 2, 9, '113.30', '2017-02-21 21:31:20', 1, 1, '2017-03-21', '113.30', '0.00', '0.00', 'paid', '0.00', 0),
-(3164, 2, 9, '36.70', '2017-02-21 21:31:20', 1, 1, '2017-04-21', '113.30', '9.10', '85.70', 'partially paid', '0.00', 0),
-(3165, 2, 9, '0.00', '0000-00-00 00:00:00', 1, 1, '2017-05-21', '113.30', '9.10', '122.40', '', '0.00', 0),
-(3166, 2, 9, '0.00', '0000-00-00 00:00:00', 1, 1, '2017-06-21', '113.30', '9.10', '122.40', '', '0.00', 0),
-(3167, 2, 9, '113.30', '2017-02-21 00:00:00', 1, 1, '2017-02-21', '113.30', '0.00', '0.00', 'paid', '0.00', 3151);
+(3164, 2, 9, '36.70', '2017-02-21 21:31:20', 1, 1, '2017-04-21', '113.30', '9.10', '167.60', 'partially paid', '0.00', 0),
+(3165, 2, 9, '0.00', '0000-00-00 00:00:00', 1, 1, '2017-05-21', '113.30', '9.10', '204.30', '', '0.00', 0),
+(3166, 2, 9, '0.00', '0000-00-00 00:00:00', 1, 1, '2017-06-21', '113.30', '9.10', '204.30', '', '0.00', 0),
+(3167, 2, 9, '113.30', '2017-02-21 00:00:00', 1, 1, '2017-02-21', '113.30', '0.00', '0.00', 'paid', '0.00', 3151),
+(3168, 5, 15, '270900.00', '2021-01-28 22:56:56', 1, 1, '2021-01-28', '270900.00', NULL, NULL, 'paid', NULL, 1903);
 
 -- --------------------------------------------------------
 
@@ -201,7 +227,7 @@ CREATE TABLE `product` (
   `prod_price` decimal(10,2) NOT NULL,
   `prod_pic` varchar(300) NOT NULL,
   `cat_id` int(11) NOT NULL,
-  `prod_qty` int(11) NOT NULL,
+  `prod_qty` int(11) DEFAULT NULL,
   `branch_id` int(11) NOT NULL,
   `reorder` int(11) NOT NULL,
   `supplier_id` int(11) NOT NULL,
@@ -213,11 +239,12 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`prod_id`, `prod_name`, `prod_desc`, `prod_price`, `prod_pic`, `cat_id`, `prod_qty`, `branch_id`, `reorder`, `supplier_id`, `serial`) VALUES
-(5, 'LG 43\" UHD TV UH6100', '', '45000.00', 'tv.jpg', 5, 5, 1, 0, 4, '19898981'),
-(13, 'Rice Cooker', '', '550.00', 'WIN_20160728_16_56_20_Pro (2).jpg', 9, 0, 1, 2, 4, '22ewew'),
+(5, 'LG 43', 'Development levy', '45000.00', 'tv.jpg', 5, 219, 1, 10, 4, '19898981'),
+(13, 'Rice Cooker', '', '550.00', 'WIN_20160728_16_56_20_Pro (2).jpg', 9, 100, 1, 2, 4, '22ewew'),
 (14, 'Samsung', '', '15000.00', 'WIN_20160209_16_45_20_Pro.jpg', 10, 5, 1, 4, 5, 'erere323'),
-(15, 'Lotion', '', '120.00', 'default.gif', 12, 100, 1, 4, 6, '1101388911'),
-(16, 'Sample', 'description', '110.00', 'default.gif', 10, -1, 1, 1, 2, '878878');
+(15, 'Lotion', '', '120.00', 'default.gif', 12, 94, 1, 4, 6, '1101388911'),
+(16, 'Sample', 'description', '110.00', 'default.gif', 10, -25, 1, 1, 2, '878878'),
+(17, 'vninfwk', 'vlkweiln', '343.00', '112.png', 14, NULL, 1, 22, 3, '12908329');
 
 -- --------------------------------------------------------
 
@@ -233,6 +260,16 @@ CREATE TABLE `purchase_request` (
   `branch_id` int(11) NOT NULL,
   `purchase_status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `purchase_request`
+--
+
+INSERT INTO `purchase_request` (`pr_id`, `prod_id`, `qty`, `request_date`, `branch_id`, `purchase_status`) VALUES
+(1, 13, 10, '2021-01-28', 1, 'pending'),
+(2, 16, 10, '2021-01-28', 1, 'pending'),
+(3, 13, 1, '2021-01-28', 1, 'pending'),
+(4, 16, 22, '2021-01-28', 1, 'pending');
 
 -- --------------------------------------------------------
 
@@ -266,7 +303,13 @@ INSERT INTO `sales` (`sales_id`, `cust_id`, `user_id`, `cash_tendered`, `discoun
 (5, 2, 1, '110.00', '0.00', '110.00', '0.00', '2017-02-21 19:56:17', 'cash', 1, '110.00'),
 (6, 1, 1, '550.00', '0.00', '550.00', '0.00', '2017-02-21 19:57:12', 'cash', 1, '550.00'),
 (7, 2, 1, '550.00', '0.00', '550.00', '0.00', '2017-02-21 19:57:29', 'cash', 1, '550.00'),
-(9, 2, 1, NULL, NULL, '0.00', NULL, '2017-02-21 21:16:52', 'credit', 1, '550.00');
+(9, 2, 1, NULL, NULL, '0.00', NULL, '2017-02-21 21:16:52', 'credit', 1, '550.00'),
+(10, 5, 1, '1000000.00', '10.00', '270910.00', '729090.00', '2021-01-28 22:52:44', 'cash', 1, '270900.00'),
+(11, 5, 1, '1000000.00', '10.00', '270910.00', '729090.00', '2021-01-28 22:53:04', 'cash', 1, '270900.00'),
+(12, 5, 1, '1000000.00', '10.00', '270910.00', '729090.00', '2021-01-28 22:53:35', 'cash', 1, '270900.00'),
+(13, 5, 1, '1000000.00', '10.00', '270910.00', '729090.00', '2021-01-28 22:54:50', 'cash', 1, '270900.00'),
+(14, 5, 1, '1000000.00', '10.00', '270910.00', '729090.00', '2021-01-28 22:56:37', 'cash', 1, '270900.00'),
+(15, 5, 1, '1000000.00', '10.00', '270910.00', '729090.00', '2021-01-28 22:56:56', 'cash', 1, '270900.00');
 
 -- --------------------------------------------------------
 
@@ -295,7 +338,25 @@ INSERT INTO `sales_details` (`sales_details_id`, `sales_id`, `prod_id`, `price`,
 (6, 6, 13, '550.00', 1),
 (7, 7, 13, '550.00', 1),
 (8, 8, 13, '550.00', 1),
-(9, 9, 13, '550.00', 1);
+(9, 9, 13, '550.00', 1),
+(10, 10, 5, '90120.00', 3),
+(11, 10, 15, '120.00', 1),
+(12, 10, 16, '110.00', 4),
+(13, 11, 5, '90120.00', 3),
+(14, 11, 15, '120.00', 1),
+(15, 11, 16, '110.00', 4),
+(16, 12, 5, '90120.00', 3),
+(17, 12, 15, '120.00', 1),
+(18, 12, 16, '110.00', 4),
+(19, 13, 5, '90120.00', 3),
+(20, 13, 15, '120.00', 1),
+(21, 13, 16, '110.00', 4),
+(22, 14, 5, '90120.00', 3),
+(23, 14, 15, '120.00', 1),
+(24, 14, 16, '110.00', 4),
+(25, 15, 5, '90120.00', 3),
+(26, 15, 15, '120.00', 1),
+(27, 15, 16, '110.00', 4);
 
 -- --------------------------------------------------------
 
@@ -319,7 +380,9 @@ INSERT INTO `stockin` (`stockin_id`, `prod_id`, `qty`, `date`, `branch_id`) VALU
 (1, 5, 5, '2017-02-04 01:10:41', 1),
 (2, 15, 100, '2017-02-04 01:10:49', 1),
 (3, 13, 10, '2017-02-04 01:10:55', 1),
-(4, 14, 5, '2017-02-04 01:11:07', 1);
+(4, 14, 5, '2017-02-04 01:11:07', 1),
+(5, 13, 100, '2021-01-28 22:36:29', 1),
+(6, 5, 232, '2021-01-28 22:36:40', 1);
 
 -- --------------------------------------------------------
 
@@ -343,8 +406,10 @@ INSERT INTO `supplier` (`supplier_id`, `supplier_name`, `supplier_address`, `sup
 (3, 'Union Home Appliances', 'Binondo, Manila', '98878'),
 (4, 'Hanabishi', 'Bacolod City', '034-666-087611'),
 (5, 'Samsung Philippines', 'Philippines', '42424'),
-(6, 'Avon', 'Bacolod City', '15562'),
-(7, 'iStore PH', 'Manila City,Philippines', '09134567890');
+(6, 'Avon', 'Bacolod City csfds', '155624354'),
+(7, 'iStore PH', 'Manila City,Philippines', '09134567890'),
+(8, 'dasdggads jhbdh', 'slduc uhbnsd ', 'svdsd'),
+(9, 'asdasd', 'asdasfafd', '23412341242134');
 
 -- --------------------------------------------------------
 
@@ -407,10 +472,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `name`, `status`, `branch_id`) VALUES
-(1, 'admin', 'a1Bz20ydqelm8m1wql21232f297a57a5a743894a0e4a801fc3', 'John Smith', 'active', 1),
-(4, 'user', 'a1Bz20ydqelm8m1wql21232f297a57a5a743894a0e4a801fc3', 'Mona Lisa', 'active', 2),
-(5, 'Mikee', 'a1Bz20ydqelm8m1wql70a5119905ec54b3edf78c6f515ac7b2', 'Mikee', 'active', 1),
-(6, 'administrator', 'a1Bz20ydqelm8m1wql21232f297a57a5a743894a0e4a801fc3', 'Giu Matthew', 'active', 0);
+(1, 'admin', 'ahmad0ydqelm8m1wql0192023a7bbd73250516f069df18b500', 'John Smith', 'active', 1),
+(4, 'admin', 'ahmad0ydqelm8m1wql0192023a7bbd73250516f069df18b500', 'Mona Lisa', 'active', 2),
+(5, 'Mikee', 'ahmad0ydqelm8m1wql0192023a7bbd73250516f069df18b500', 'Mikee', 'active', 1),
+(6, 'admin', 'rex0ydqelm8m1wql21232f297a57a5a743894a0e4a801fc3', 'Giu Matthew', 'active', 0),
+(7, 'admin', 'ahmad0ydqelm8m1wql0192023a7bbd73250516f069df18b500', 'Ahmad uhudsj', 'active', 3),
+(8, 'admin', 'ahmad0ydqelm8m1wql0192023a7bbd73250516f069df18b500', 'treehays kj', 'active', 4);
 
 --
 -- Indexes for dumped tables
@@ -514,67 +581,67 @@ ALTER TABLE `branch`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `history_log`
 --
 ALTER TABLE `history_log`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3168;
+  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3169;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `purchase_request`
 --
 ALTER TABLE `purchase_request`
-  MODIFY `pr_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `pr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `sales_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `sales_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `sales_details`
 --
 ALTER TABLE `sales_details`
-  MODIFY `sales_details_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `sales_details_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `stockin`
 --
 ALTER TABLE `stockin`
-  MODIFY `stockin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `stockin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `supplier`
 --
 ALTER TABLE `supplier`
-  MODIFY `supplier_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `supplier_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `temp_trans`
 --
 ALTER TABLE `temp_trans`
-  MODIFY `temp_trans_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `temp_trans_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `term`
@@ -586,7 +653,7 @@ ALTER TABLE `term`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

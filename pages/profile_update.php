@@ -12,11 +12,11 @@ include('../dist/includes/dbcon.php');
 	$old =$_POST['passwordold'];
 	
 	$pass=md5($old);
-	$salt="a1Bz20ydqelm8m1wql";
+	$salt="ahmad0ydqelm8m1wql";
 	$pass=$salt.$pass;
 	
 	$passnew=md5($password);
-	$salt="a1Bz20ydqelm8m1wql";
+	$salt="ahmad0ydqelm8m1wql";
 	$passnew=$salt.$passnew;
 	
 		$query=mysqli_query($con,"select password from user where user_id='$id'")or die(mysqli_error());

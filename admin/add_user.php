@@ -7,7 +7,7 @@ include 'dbcon.php';
 	$branch_id = $_POST['branch_id'];
 	
 	$pass1=md5($password);
-	$salt="a1Bz20ydqelm8m1wql";
+	$salt="ahmad0ydqelm8m1wql";
 	$pass1=$salt.$pass1;
 	
 	
