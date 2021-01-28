@@ -129,15 +129,15 @@ $branch=$_SESSION['branch'];
                       </tr>
                     </thead>
                   </table>
-                  <table class="table">
+                  <table class="table" >
                     <thead>
                         
                       <tr style="border: solid 1px #000">
-                        <th>QTY</th>
-                        <th>UNIT</th>
-                        <th>ARTICLES</th>
-            						<th>Unit Price</th>
-            						<th class="text-right">AMOUNT</th>
+                        <th style="border: solid 1px #000">QTY</th>
+                        <th style="border: solid 1px #000">UNIT</th>
+                        <th style="border: solid 1px #000">ARTICLES</th>
+            						<th style="border: solid 1px #000">Unit Price</th>
+            						<th style="border: solid 1px #000" class="text-right">AMOUNT</th>
                       </tr>
                     </thead>
                     <tbody>
