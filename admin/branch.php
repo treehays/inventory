@@ -59,19 +59,6 @@
 		
 		
 		
-		
-		
-		
-		
-		
-				
-		
-		
-		
-		
-		
-		
-		
         <!-- /page content -->
 
         <!-- footer content -->

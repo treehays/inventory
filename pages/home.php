@@ -39,7 +39,7 @@ endif;
       <?php include('../dist/includes/header.php');?>
       <!-- Full Width Column -->
       <div class="content-wrapper">
-        <div class="container">
+        <div class="container" >
           <!-- Content Header (Page header) -->
          
 
@@ -67,7 +67,7 @@ endif;
                 if ($Hour >= 5 && $Hour <= 11) {
                   $greetings = "Good Morning,";
                 }else if ($Hour >= 12 && $Hour <= 17) {
-                  $greetings ="Good AFternoon, ";
+                  $greetings ="Good Aternoon, ";
                 }else if ($Hour >= 18 && $Hour <= 20) {
                   $greetings ="Good Evening, ";
                 }else {
@@ -108,7 +108,7 @@ endif;
                             <p>Cash</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="fa fa-money-check-alt fa-1x spin midix_hover infinite"></i>
+                            <i class="fa fa-money-check-alt fa-1x spinpulse midix_hover infinite"></i>
                           </div>
                           <a href="cust_new.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
@@ -127,7 +127,7 @@ endif;
                             <p>Products</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="glyphicon glyphicon-share-alt fa-1x spin midix_hover infinite"></i>
+                            <i class="glyphicon glyphicon-share-alt fa-1x flip midix_hover infinite"></i>
                           </div>
                           <a href="stockin.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
@@ -145,7 +145,7 @@ endif;
                             <p>Customer</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="fa fa-cash-register fa-1x spin midix_hover infinite"></i>
+                            <i class="fa fa-cash-register fa-1x tada midix_hover infinite"></i>
                           </div>
                           <a href="customer.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
@@ -162,7 +162,7 @@ endif;
                             <p>Apply</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="fa fa-money-check-edit-alt fa-1x spin midix_hover infinite"></i>
+                            <i class="fa fa-money-check-edit-alt fa-1x wobble midix_hover infinite"></i>
                           </div>
                           <a href="creditor.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
@@ -180,7 +180,7 @@ endif;
                             <p>View/Add</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="glyphicon glyphicon-shopping-cart fa-1x spin midix_hover infinite"></i>
+                            <i class="glyphicon glyphicon-shopping-cart fa-1x jello midix_hover infinite"></i>
                           </div>
                           <a href="product.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
@@ -202,7 +202,7 @@ endif;
                             <p>Sales</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="fa fa-list-alt fa-1x spin midix_hover infinite"></i>
+                            <i class="fa fa-list-alt fa-1x shake midix_hover infinite"></i>
                           </div>
                           <a href="stockin.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
