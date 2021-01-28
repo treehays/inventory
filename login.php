@@ -7,7 +7,9 @@
 
 <head>
 	<style type="text/css">
-		#cssload-pgloading {}
+		#cssload-pgloading {
+			content: "";
+		}
 
 		#cssload-pgloading:after {
 			content: "";
