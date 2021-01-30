@@ -66,7 +66,7 @@ endif;
                     <tbody>
 <?php
 		
-		$query=mysqli_query($con,"select * from history_log natural join user order by date desc")or die(mysqli_error());
+		$query=mysqli_query($con,"select * from history_log natural join user order by date desc")or die(mysqli_error($con));
 		while($row=mysqli_fetch_array($query)){
 		
 ?>
