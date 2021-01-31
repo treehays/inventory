@@ -9,7 +9,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/admin.png" alt="..." class="img-circle profile_img">	
+                <img src="images/admin.jpg" alt="Profile Pics" class="img-circle profile_img">	
               </div>
               <div class="profile_info">
                 <span>Welcome</span>

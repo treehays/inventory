@@ -16,7 +16,7 @@
                     </ul>
                   </li>
 				    <li><a href = "overall.php"><i class="fa fa-file"></i> Overall Reports<span class="fa fa-chevron-right"></span></a></li>
-                  <li><a href = "branch.php"><i class="fa fa-building"></i> Branch <span class="fa fa-chevron-right"></span></a>
+                  <li><a href = "branch.php"><i class="fa fa-bank"></i> Branch <span class="fa fa-chevron-right"></span></a>
                     <!--- <ul class="nav child_menu">
                       <li><a href="branch.php">Branch</a></li>
                       <li><a href="index2.html">User</a></li>
