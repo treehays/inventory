@@ -33,7 +33,7 @@ include('../dist/includes/dbcon.php');
 
 		if ($count>0)
 		{
-			mysqli_query($con,"update customer set cust_contact='$contact',credit_status='pending' where cust_id='$id'")or die(mysqli_error());
+			mysqli_query($con,"update customer set cust_contact='$contact',credit_status='pending' where cust_id='$id'")or die(mysqli_error($con));
 	
 			echo "<script type='text/javascript'>alert('Application resubmitted for approval!');</script>";
 			echo "<script>document.location='creditor.php'</script>";  

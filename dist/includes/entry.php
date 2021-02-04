@@ -27,7 +27,7 @@
 	$salt="ahmad0ydqelm8m1wql";
 	$pass=$salt.$password1;
 	echo $pass;
-	$query=mysqli_query($con,"select COUNT(*) as total from user where username='$username'")or die(mysqli_error());
+	$query=mysqli_query($con,"select COUNT(*) as total from user where username='$username'")or die(mysqli_error($con));
 		$row=mysqli_fetch_array($query);
 		if ($row['total']==0)
 		{

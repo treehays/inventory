@@ -21,7 +21,7 @@ $branch_id = $_GET['id'];
 						<div class="right_col" role="main">
 								<?php					 
 			$branch=$_GET['id'];
-			$query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error());  
+			$query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error($con));  
 			$row=mysqli_fetch_array($query);
         
 	?>      

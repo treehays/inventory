@@ -57,7 +57,7 @@
                       <select class="form-control select2" style="width:100%;" name="prod_name" required>
                       <?php
 			 include('../dist/includes/dbcon.php');
-				$query2=mysqli_query($con,"select * from customer order by cust_name")or die(mysqli_error());
+				$query2=mysqli_query($con,"select * from customer order by cust_name")or die(mysqli_error($con));
 				  while($row=mysqli_fetch_array($query2)){
 		      ?>
 				    <option value="<?php echo $row['cust_id'];?>"><?php echo $row['cust_name'];?></option>
@@ -108,7 +108,7 @@
                     <tbody>
 <?php
 		
-		$query=mysqli_query($con,"select * from stockin natural join product order by date desc")or die(mysqli_error());
+		$query=mysqli_query($con,"select * from stockin natural join product order by date desc")or die(mysqli_error($con));
 		while($row=mysqli_fetch_array($query)){
 		
 ?>
@@ -146,7 +146,7 @@
 						  <option><?php echo $row['prod_unit'];?></option>
 					      <?php
 						
-							$query2=mysqli_query($con,"select * from unit")or die(mysqli_error());
+							$query2=mysqli_query($con,"select * from unit")or die(mysqli_error($con));
 							  while($row2=mysqli_fetch_array($query2)){
 					      ?>
 							    <option><?php echo $row2['unit'];?></option>

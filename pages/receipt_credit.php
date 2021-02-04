@@ -58,7 +58,7 @@ endif;
 include('../dist/includes/dbcon.php');
 
 $branch=$_SESSION['branch'];
-    $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error());
+    $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error($con));
   
         $row=mysqli_fetch_array($query);
         
@@ -138,7 +138,7 @@ include('../dist/includes/dbcon.php');
                     </thead>
                     <tbody>
 <?php
-		$query1=mysqli_query($con,"select * from sales natural join sales_details natural join product where sales_id='$sid'")or die(mysqli_error());
+		$query1=mysqli_query($con,"select * from sales natural join sales_details natural join product where sales_id='$sid'")or die(mysqli_error($con));
 			$grand=0;
 		while($row1=mysqli_fetch_array($query1)){
 

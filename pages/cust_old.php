@@ -64,7 +64,7 @@ endif;
                       <select class="form-control select2" style="width: 100%;" name="customer" required>
                       <?php
                        include('../dist/includes/dbcon.php');
-                        $query2=mysqli_query($con,"select * from customer order by cust_last, cust_first")or die(mysqli_error());
+                        $query2=mysqli_query($con,"select * from customer order by cust_last, cust_first")or die(mysqli_error($con));
                           while($row2=mysqli_fetch_array($query2)){
                       ?>
             <option value="<?php echo $row2['cust_id'];?>"><?php echo $row2['cust_last'].", ".$row2['cust_first'];?></option>

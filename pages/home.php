@@ -192,7 +192,7 @@ endif;
                       
 
 
-                      <div class="col-lg-4 col-xs-6">
+                      <div class="col-lg-4 col-xs-6" > 
                         <!-- small box -->
                         <div class="small-box bg-light-blue">
                           <div class="inner">
@@ -229,7 +229,7 @@ endif;
                 </div><!-- /.box-header -->
     <?php
     $branch=$_SESSION['branch'];
-    $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error());
+    $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error($con));
       $row=mysqli_fetch_array($query);
       
 ?>

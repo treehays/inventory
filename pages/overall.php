@@ -147,7 +147,7 @@ endif;
 <?php
 		
 		$query=mysqli_query($con,"select * from material where 
-		date(date)>='$start' and date(date)<='$end' group by date(date)")or die(mysqli_error());
+		date(date)>='$start' and date(date)<='$end' group by date(date)")or die(mysqli_error($con));
 			$mat=0;
 		while($row=mysqli_fetch_array($query)){
 			$mat+=$row['amount'];
@@ -164,7 +164,7 @@ endif;
 <?php
 		
 		$query=mysqli_query($con,"select * from expense where 
-		date(date)>='$start' and date(date)<='$end'")or die(mysqli_error());
+		date(date)>='$start' and date(date)<='$end'")or die(mysqli_error($con));
 			$exp=0;
 			while($row=mysqli_fetch_array($query)){
 				$exp+=$row['amount'];

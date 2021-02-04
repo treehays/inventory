@@ -71,7 +71,7 @@ endif;
                     <tbody>
 <?php
 		$branch=$_SESSION['branch'];
-		$query=mysqli_query($con,"select * from customer where branch_id='$branch'")or die(mysqli_error());
+		$query=mysqli_query($con,"select * from customer where branch_id='$branch'")or die(mysqli_error($con));
 		while($row=mysqli_fetch_array($query)){
 		
 ?>

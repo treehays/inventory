@@ -60,7 +60,7 @@ endif;
 include('../dist/includes/dbcon.php');
 $id=$_SESSION['id'];
 $branch=$_SESSION['branch'];
-    $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error());
+    $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error($con));
   
         $row=mysqli_fetch_array($query);
         

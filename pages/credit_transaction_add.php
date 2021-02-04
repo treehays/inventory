@@ -10,17 +10,17 @@ include('../dist/includes/dbcon.php');
 	$qty = $_POST['qty'];
 		
 			
-		$query=mysqli_query($con,"select prod_price,prod_id from product where prod_id='$name'")or die(mysqli_error());
+		$query=mysqli_query($con,"select prod_price,prod_id from product where prod_id='$name'")or die(mysqli_error($con));
 		$row=mysqli_fetch_array($query);
 		$price=$row['prod_price'];
 		
-		$query1=mysqli_query($con,"select * from temp_trans where branch_id='$branch'")or die(mysqli_error());
+		$query1=mysqli_query($con,"select * from temp_trans where branch_id='$branch'")or die(mysqli_error($con));
 		$count=mysqli_num_rows($query1);
 		
 		$total=$price*$qty;
 		
 		if ($count>0){
-			mysqli_query($con,"update temp_trans set qty='$qty',price='$total' where branch_id='$branch'")or die(mysqli_error());
+			mysqli_query($con,"update temp_trans set qty='$qty',price='$total' where branch_id='$branch'")or die(mysqli_error($con));
 	
 		}
 		else{

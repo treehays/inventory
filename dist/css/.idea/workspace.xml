@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd5702b4-be9e-4869-8dc1-3b3caaa992d5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/AdminLTE.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/AdminLTE.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pages/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../pages/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../includes/dbcon.php" beforeDir="false" afterPath="$PROJECT_DIR$/../includes/dbcon.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1nTKu5a7DhjXIs41bVIgFEK4IQq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

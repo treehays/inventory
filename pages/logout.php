@@ -7,7 +7,12 @@ endif;
 <html>
 <head>
 	<style type="text/css">
-		#cssload-pgloading {}
+		#cssload-pgloading {
+			content: "";
+		z-index: -1;
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		}
 
 #cssload-pgloading:after {
 		content: "";

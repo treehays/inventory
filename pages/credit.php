@@ -22,7 +22,7 @@ endif;
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-    <script language="JavaScript"><!--
+    <script language="JavaScript">
 javascript:window.history.forward(1);
 //--></script>
  </head>
@@ -65,7 +65,7 @@ javascript:window.history.forward(1);
 <?php
 		$cid=$_REQUEST['cid'];
     $sid=$_SESSION['sid'];
-		$query=mysqli_query($con,"select * from sales natural join sales_details natural join product where sales_id='$sid'")or die(mysqli_error());
+		$query=mysqli_query($con,"select * from sales natural join sales_details natural join product where sales_id='$sid'")or die(mysqli_error($con));
 			$grand=0;
 		while($row=mysqli_fetch_array($query)){
 				//$id=$row['temp_trans_id'];
@@ -113,7 +113,7 @@ javascript:window.history.forward(1);
 					 <div class="col-md-12">
 <?php
 $sid=$_SESSION['sid'];
-$query=mysqli_query($con,"select * from term where sales_id='$sid'")or die(mysqli_error());
+$query=mysqli_query($con,"select * from term where sales_id='$sid'")or die(mysqli_error($con));
 
     $row=mysqli_fetch_array($query);
         $down=$row['down'];

@@ -18,7 +18,7 @@ $branch_id = $_GET['id'];
 						<div class = "x-panel">
 	<?php					 
 			$branch=$_SESSION['branch'];
-			$query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error());  
+			$query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error($con));  
 			$row=mysqli_fetch_array($query);
         
 	?>      
@@ -47,7 +47,7 @@ $branch_id = $_GET['id'];
                     <tbody>
 							<?php
 									$branch=$_GET['id'];
-									$query=mysqli_query($con,"select * from product where branch_id='$branch' order by prod_name")or die(mysqli_error());
+									$query=mysqli_query($con,"select * from product where branch_id='$branch' order by prod_name")or die(mysqli_error($con));
 									$grand=0;
 									while($row=mysqli_fetch_array($query)){
 										$total=$row['prod_price']*$row['prod_qty'];

@@ -19,7 +19,7 @@ include('../dist/includes/dbcon.php');
 	$salt="ahmad0ydqelm8m1wql";
 	$passnew=$salt.$passnew;
 	
-		$query=mysqli_query($con,"select password from user where user_id='$id'")or die(mysqli_error());
+		$query=mysqli_query($con,"select password from user where user_id='$id'")or die(mysqli_error($con));
 			$row=mysqli_fetch_array($query);
 	
 				$passold=$row['password'];

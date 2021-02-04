@@ -24,7 +24,7 @@ endif;
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
     <script src="../dist/js/jquery.min.js"></script>
-    <script language="JavaScript"><!--
+    <script language="JavaScript">
 javascript:window.history.forward(1);
 //--></script>
  </head>
@@ -69,7 +69,7 @@ javascript:window.history.forward(1);
                   $branch=$_SESSION['branch'];
                   $cid=$_REQUEST['cid'];
 								  include('../dist/includes/dbcon.php');
-									 $query2=mysqli_query($con,"select * from product where branch_id='$branch' order by prod_name")or die(mysqli_error());
+									 $query2=mysqli_query($con,"select * from product where branch_id='$branch' order by prod_name")or die(mysqli_error($con));
 									    while($row=mysqli_fetch_array($query2)){
 								?>
 										<option value="<?php echo $row['prod_id'];?>"><?php echo $row['prod_name']." Available(".$row['prod_qty'].")";?></option>
@@ -97,7 +97,7 @@ javascript:window.history.forward(1);
 					</div>
 					<div class="col-md-12">
 <?php 
-$queryb=mysqli_query($con,"select balance from customer where cust_id='$cid'")or die(mysqli_error());
+$queryb=mysqli_query($con,"select balance from customer where cust_id='$cid'")or die(mysqli_error($con));
      $rowb=mysqli_fetch_array($queryb);
         $balance=$rowb['balance'];
 
@@ -117,7 +117,7 @@ $queryb=mysqli_query($con,"select balance from customer where cust_id='$cid'")or
                     <tbody>
 <?php
 		
-		$query=mysqli_query($con,"select * from temp_trans natural join product where branch_id='$branch'")or die(mysqli_error());
+		$query=mysqli_query($con,"select * from temp_trans natural join product where branch_id='$branch'")or die(mysqli_error($con));
 			$grand=0;
 		while($row=mysqli_fetch_array($query)){
 				$id=$row['temp_trans_id'];
@@ -319,7 +319,7 @@ $queryb=mysqli_query($con,"select balance from customer where cust_id='$cid'")or
           "paging": true,
           "lengthChange": false,
           "searching": false,
-          "ordering": true,x`
+          "ordering": true,
           "info": true,
           "autoWidth": false
         });

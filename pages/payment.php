@@ -67,7 +67,7 @@ endif;
                   <form method="post" action="" enctype="multipart/form-data">
 		  <?php
         
-		      $query=mysqli_query($con,"select * from customer where cust_id='$cid'")or die(mysqli_error());
+		      $query=mysqli_query($con,"select * from customer where cust_id='$cid'")or die(mysqli_error($con));
 			       $row=mysqli_fetch_array($query);
 		  ?>	
 		    <img class = "profile_pic" src = "../dist/uploads/<?php echo $row['cust_pic'];?>">

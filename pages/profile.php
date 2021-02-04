@@ -45,7 +45,7 @@ endif;
           </section>
 <?php
 		    $id=$_SESSION['id'];
-		      $query=mysqli_query($con,"select * from user where user_id='$id'")or die(mysqli_error());
+		      $query=mysqli_query($con,"select * from user where user_id='$id'")or die(mysqli_error($con));
 				$row=mysqli_fetch_array($query);
 		  ?>	
           <!-- Main content -->

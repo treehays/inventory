@@ -71,7 +71,7 @@ endif;
                   <form method="post" action="" enctype="multipart/form-data">
 		  <?php
 		    
-		      $query=mysqli_query($con,"select * from customer where cust_id='$cid'")or die(mysqli_error());
+		      $query=mysqli_query($con,"select * from customer where cust_id='$cid'")or die(mysqli_error($con));
 			       $row=mysqli_fetch_array($query);
 		  ?>	
 		    <img class = "profile_pic" src = "../dist/uploads/<?php echo $row['cust_pic'];?>">
@@ -223,7 +223,7 @@ endif;
                     <tbody>
 <?php
     $cid=$_REQUEST['cid'];
-    $query3=mysqli_query($con,"select * from payment natural join sales_details natural join product where cust_id='$cid' and status='paid' order by payment_date desc")or die(mysqli_error());
+    $query3=mysqli_query($con,"select * from payment natural join sales_details natural join product where cust_id='$cid' and status='paid' order by payment_date desc")or die(mysqli_error($con));
     while($row3=mysqli_fetch_array($query3)){
     
 ?>

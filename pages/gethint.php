@@ -2,7 +2,7 @@
 // Array with names
 
 include('../dist/includes/dbcon.php');
-$query=mysqli_query($con,"select fname,lname,resident_id from resident")or die(mysqli_error());
+$query=mysqli_query($con,"select fname,lname,resident_id from resident")or die(mysqli_error($con));
 		while($row=mysqli_fetch_array($query)){
 	   
 

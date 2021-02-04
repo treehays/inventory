@@ -71,7 +71,7 @@ endif;
 			  <?php
 			  include('../dist/includes/dbcon.php');
 			  $id=$_SESSION['id'];
-			    $query2=mysqli_query($con,"select * from teacher where t_id='$id'")or die(mysqli_error());
+			    $query2=mysqli_query($con,"select * from teacher where t_id='$id'")or die(mysqli_error($con));
 				$row1=mysqli_fetch_array($query2);
 			  ?>	
 			  <form class="form-horizontal" method="post" action="personalinfo_update.php">

@@ -72,7 +72,7 @@ endif;
                     <tbody>
 <?php
 		
-		$query=mysqli_query($con,"select * from product natural join supplier natural join category where branch_id='$branch' order by prod_name")or die(mysqli_error());
+		$query=mysqli_query($con,"select * from product natural join supplier natural join category where branch_id='$branch' order by prod_name")or die(mysqli_error($con));
 		while($row=mysqli_fetch_array($query)){
 		
 ?>
@@ -127,7 +127,7 @@ endif;
 						  <option value="<?php echo $row['supplier_id'];?>"><?php echo $row['supplier_name'];?></option>
 					      <?php
 						
-							$query2=mysqli_query($con,"select * from supplier")or die(mysqli_error());
+							$query2=mysqli_query($con,"select * from supplier")or die(mysqli_error($con));
 							  while($row2=mysqli_fetch_array($query2)){
 					      ?>
 							    <option value="<?php echo $row['supplier_id'];?>"><?php echo $row2['supplier_name'];?></option>
@@ -150,7 +150,7 @@ endif;
               <option value="<?php echo $row['cat_id'];?>"><?php echo $row['cat_name'];?></option>
                 <?php
             
-              $queryc=mysqli_query($con,"select * from category order by cat_name")or die(mysqli_error());
+              $queryc=mysqli_query($con,"select * from category order by cat_name")or die(mysqli_error($con));
                 while($rowc=mysqli_fetch_array($queryc)){
                 ?>
                   <option value="<?php echo $rowc['cat_id'];?>"><?php echo $rowc['cat_name'];?></option>
@@ -247,7 +247,7 @@ endif;
               <select class="form-control select2" style="width: 100%;" name="supplier" required>
                 <?php
             
-              $query2=mysqli_query($con,"select * from supplier")or die(mysqli_error());
+              $query2=mysqli_query($con,"select * from supplier")or die(mysqli_error($con));
                 while($row2=mysqli_fetch_array($query2)){
                 ?>
                   <option value="<?php echo $row2['supplier_id'];?>"><?php echo $row2['supplier_name'];?></option>
@@ -270,7 +270,7 @@ endif;
               
                 <?php
             
-              $queryc=mysqli_query($con,"select * from category order by cat_name")or die(mysqli_error());
+              $queryc=mysqli_query($con,"select * from category order by cat_name")or die(mysqli_error($con));
                 while($rowc=mysqli_fetch_array($queryc)){
                 ?>
                   <option value="<?php echo $rowc['cat_id'];?>"><?php echo $rowc['cat_name'];?></option>

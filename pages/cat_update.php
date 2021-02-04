@@ -8,7 +8,7 @@ include('../dist/includes/dbcon.php');
 	$category =$_POST['category'];
 	
 	
-	mysqli_query($con,"update category set cat_name='$category' where cat_id='$id'")or die(mysqli_error());
+	mysqli_query($con,"update category set cat_name='$category' where cat_id='$id'")or die(mysqli_error($con));
 	
 	echo "<script type='text/javascript'>alert('Successfully updated category!');</script>";
 	echo "<script>document.location='category.php'</script>";  

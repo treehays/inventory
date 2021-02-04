@@ -41,7 +41,7 @@ $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die
                       <i class="glyphicon glyphicon-refresh text-red"></i> Reorder
                       <span class="label label-danger">
                       <?php 
-                      $query=mysqli_query($con,"select COUNT(*) as count from prod_branch natural join product where prod_qty<=reorder and branch_id='$branch'")or die(mysqli_error());
+                      $query=mysqli_query($con,"select COUNT(*) as count from prod_branch natural join product where prod_qty<=reorder and branch_id='$branch'")or die(mysqli_error($con));
                 			$row=mysqli_fetch_array($query);
                 			echo $row['count'];
                 			?>	
@@ -53,7 +53,7 @@ $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die
                         <!-- Inner Menu: contains the notifications -->
                         <ul class="menu">
                         <?php
-                        $queryprod=mysqli_query($con,"select prod_name from product natural join prod_branch where prod_qty<=reorder and branch_id='$branch'")or die(mysqli_error());
+                        $queryprod=mysqli_query($con,"select prod_name from product natural join prod_branch where prod_qty<=reorder and branch_id='$branch'")or die(mysqli_error($con));
 			  while($rowprod=mysqli_fetch_array($queryprod)){
 			?>
                           <li><!-- start notification -->

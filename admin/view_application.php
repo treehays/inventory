@@ -48,7 +48,7 @@ endif;
                 </div>
   <?php          
       $cid=$_GET['cid'];
-      $query=mysqli_query($con,"select * from customer where cust_id='$cid'")or die(mysqli_error());  
+      $query=mysqli_query($con,"select * from customer where cust_id='$cid'")or die(mysqli_error($con));  
         $row=mysqli_fetch_array($query);
         
   ?>      

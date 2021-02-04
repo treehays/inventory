@@ -95,7 +95,7 @@ endif;
                     <tbody>
 <?php
 		
-		$query=mysqli_query($con,"select * from category order by cat_name")or die(mysqli_error());
+		$query=mysqli_query($con,"select * from category order by cat_name")or die(mysqli_error($con));
 		while($row=mysqli_fetch_array($query)){
 		
 ?>

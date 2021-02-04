@@ -31,6 +31,7 @@ body {
     font-weight: 400;
     overflow-x: hidden;
     overflow-y: auto;
+    background: url('../img/boxed-bg.jpg') repeat fixed;
 }
 
 
@@ -61,7 +62,7 @@ body {
 }
 
 .layout-boxed {
-    background: url('../img/boxed-bg.jpg') repeat fixed;
+    /* background: url('../img/boxed-bg.jpg') repeat fixed; */
 }
 
 

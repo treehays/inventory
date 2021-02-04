@@ -55,7 +55,7 @@ endif;
                   <form method="post" action="" enctype="multipart/form-data">
       <?php
           $cid=$_REQUEST['customer'];
-          $query=mysqli_query($con,"select * from customer where cust_id='$cid'")or die(mysqli_error());
+          $query=mysqli_query($con,"select * from customer where cust_id='$cid'")or die(mysqli_error($con));
       $row=mysqli_fetch_array($query);
       ?>  
                   <div class="form-group">
