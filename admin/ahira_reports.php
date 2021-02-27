@@ -22,7 +22,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Sales and Inventory System <a href="#"></a>
+            Hypermarket Managment System <a href="#"></a>
           </div>
           <div class="clearfix"></div>
         </footer>

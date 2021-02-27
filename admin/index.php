@@ -60,8 +60,8 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Sales and Inventory System </h1>
-                  <p>©2021 All Rights Reserved Fuk/sci/16/com/0089  Kashere.</p>
+                  <h1><i class="fa fa-paw"></i> Hypermarket Manag. System </h1>
+                  <p>©2020 All Rights Reserved FukuSci16com0089  Kashere.</p>
                 </div>
               </div>
             </form>
